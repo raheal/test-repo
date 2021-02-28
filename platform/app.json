@@ -1,0 +1,97 @@
+{
+  "runtime": {
+    "arguments": "--v=1 --inspect",
+    "version": "alpha"
+  },
+  "shortcut": {
+    "company": "OpenFin",
+    "description": "Platform Demo",
+    "icon": "https://openfin.github.io/golden-prototype/favicon.ico",
+    "name": "Platform Generated App"
+  },
+  "platform": {
+    "uuid": "platform_prototype_generated",
+    "applicationIcon": "https://openfin.github.io/golden-prototype/favicon.ico",
+    "autoShow": false
+  },
+  "snapshot": {
+    "windows": [
+      {
+        "defaultWidth": 800,
+        "defaultHeight": 600,
+        "defaultLeft": 0,
+        "defaultTop": 0,
+        "saveWindowState": false,
+        "backgroundThrottling": true,
+        "layout": {
+          "content": [
+            {
+              "type": "row",
+              "id": "mainRow",
+              "isClosable": true,
+              "reorderEnabled": true,
+              "title": "main-row",
+              "content": [
+                {
+                  "type": "stack",
+                  "width": 16.73931996512642,
+                  "isClosable": true,
+                  "reorderEnabled": true,
+                  "title": "stack-1",
+                  "activeItemIndex": 0,
+                  "content": [
+                    {
+                      "type": "component",
+                      "componentName": "view",
+                      "componentState": {
+                        "url": "http://localhost:8083/app-menu.html",
+                        "name": "google-view"
+                      },
+                      "isClosable": true,
+                      "reorderEnabled": true,
+                      "title": "google-view"
+                    }
+                  ]
+                },
+                {
+                  "type": "stack",
+                  "header": {},
+                  "isClosable": true,
+                  "reorderEnabled": true,
+                  "title": "stack-2",
+                  "activeItemIndex": 1,
+                  "height": 100,
+                  "width": 83.26068003487359,
+                  "content": [
+                    {
+                      "type": "component",
+                      "componentName": "view",
+                      "componentState": {
+                        "url": "http://localhost:3001",
+                        "name": "aol-view"
+                      },
+                      "isClosable": true,
+                      "reorderEnabled": true,
+                      "title": "aol-view"
+                    },
+                    {
+                      "type": "component",
+                      "componentName": "view",
+                      "componentState": {
+                        "url": "http://localhost:4200/dashboard",
+                        "name": "youtube-view"
+                      },
+                      "isClosable": true,
+                      "reorderEnabled": true,
+                      "title": "youtube-view"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
