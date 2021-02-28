@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Message Monitor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    #table {
+        overflow:scroll;
+        height:200px;
+        width:500px;
+        font-size: 0.7em;
+        background-color: black;
+
+    }
+    </style>
+    <script type="text/javascript">
+        // window.addEventListener('DOMContentLoaded', (event) => {
+        //     window.alert("Content loaded");
+        // });
+
+        var counter = 0;
+
+        function addMessage(topic, message) {
+            var table = document.getElementById("messagemonitor");
+            
+            var prev = table.rows.item(1).style.backgroundColor;
+
+
+
+            var row = table.insertRow(1);
+            row.insertCell(0).innerHTML = counter++;
+            row.insertCell(1).innerHTML = topic;
+            row.insertCell(2).innerHTML = message;
+            var date = new Date();
+            row.insertCell(3).innerHTML = date.getHours() + ":" + date.getMinutes() + ":" +date.getSeconds();
+
+            table.rows.item(1).style.backgroundColor = "blue";
+            table.rows.item(2).style.backgroundColor = "#212529";
+            
+
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="addMessage('topic', 'dve')">Add Message</button>
+    <div id="table">
+        <table id="messagemonitor" class="table table-sm table-dark table-hover">
+            <thead>
+                <th>Message number</th>
+                <th>topic</th>
+                <th>Message</th>
+                <th>Timestamp</th> 
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>ni_topic</td>
+                <td>JsonMessage</td>
+                <td>00:00:00</td> 
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+

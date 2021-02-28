@@ -1,0 +1,14 @@
+{
+	"devtools_port" : 9090,
+	"startup_app" : {
+		"name": "single-app",
+		"url": "http://localhost:3001",
+		"uuid": "uuid-single-app",
+		"saveWindowState": false,
+		"autoShow": true
+	},
+	"runtime": {
+		"version": "stable"
+	}
+
+}
